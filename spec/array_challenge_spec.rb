@@ -47,3 +47,15 @@ describe "sum_array_alt" do
     expect(sum_array([1, 2, 3, 4, 5, 5])).to eq(20)
   end
 end
+
+describe "double_sum" do
+  it "returns 30 when passed [1, 2, 3, 4, 5]" do
+    expect(double_sum([1, 2, 3, 4, 5])).to eq(30)
+  end
+end
+
+describe "double_sum_alt" do
+  it "returns 36 when passed [4, 6, 8]" do
+    expect(double_sum([4, 6, 8])).to eq(36)
+  end
+end

@@ -13,3 +13,7 @@ end
 def sum_array(numbers)
   numbers.reduce(:+)
 end
+
+def double_sum(numbers)
+  2 * sum_array(numbers)
+end
