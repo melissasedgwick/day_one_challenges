@@ -47,3 +47,15 @@ describe "return_sorted_values" do
     expect(return_sorted_values({ a: 10, b: 0, c: 7 })).to eq([0, 7, 10])
   end
 end
+
+describe "swap_key_value" do
+  it "returns { ""1""=>""a"", ""2""=>""b"", ""3""=>""c"" } when passed { a: 1, b: 2, c: 3 } " do
+    expect(swap_key_value({ a: 1, b: 2, c: 3 })).to eq({ "1"=>"a", "2"=>"b", "3"=>"c" })
+  end
+end
+
+describe "swap_key_value" do
+  it "returns { ""5""=>""m"", ""7""=>""e"", ""9""=>""l"" } when passed { m: 5, e: 7, l: 9 } " do
+    expect(swap_key_value({ m: 5, e: 7, l: 9 })).to eq({ "5"=>"m", "7"=>"e", "9"=>"l" })
+  end
+end

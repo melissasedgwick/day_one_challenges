@@ -17,3 +17,7 @@ def sort_values(hash)
   end
   return hash
 end
+
+def swap_key_value(hash)
+  hash.invert.collect {|key, value| [key.to_s, value.to_s]}.to_h
+end
