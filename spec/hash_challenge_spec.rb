@@ -35,3 +35,15 @@ describe "sort_values" do
     expect(sort_values({m: 2, e: 3, l: 1 })).to eq({ m: 1, e: 2, l: 3 })
   end
 end
+
+describe "return_sorted_values" do
+  it "returns [1, 2, 5] when passed { a: 2, b: 5, c: 1 }" do
+    expect(return_sorted_values({ a: 2, b: 5, c: 1 })).to eq([1, 2, 5])
+  end
+end
+
+describe "return_sorted_values" do
+  it "returns [0, 7, 10] when passed { a: 10, b: 0, c: 7 }" do
+    expect(return_sorted_values({ a: 10, b: 0, c: 7 })).to eq([0, 7, 10])
+  end
+end

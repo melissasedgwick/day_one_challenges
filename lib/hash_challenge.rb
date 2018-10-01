@@ -4,9 +4,13 @@ def increase_value_by_1(hash)
   end
 end
 
+def return_sorted_values(hash)
+  hash.values.sort
+end
+
 def sort_values(hash)
   i = 0
-  array_values = hash.values.sort
+  array_values = return_sorted_values(hash)
   hash.each do |key, value|
     hash[key] = array_values[i]
     i += 1
