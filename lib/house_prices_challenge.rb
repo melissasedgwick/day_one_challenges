@@ -90,19 +90,21 @@ def find_prices
   return @prices
 end
 
+def find_date
+  @dates = []
+  @house_prices.each do |key, value|
+    @dates << value[:transactions][0][2]
+  end
+  return @dates
+end
+
+
 def output
   i = 0
   while i < find_district.length do
-    puts "A house was sold in #{find_district[i]}, #{find_ward[i]}"
+    puts "A house was sold in #{find_district[i]}, #{find_ward[i]} for #{find_prices[i]} on #{find_date[i]}"
     i += 1
   end
 end
 
-
-#puts find_prices
-
-#A house was sold in [district], [ward] for [price] on [date]
-#A house was sold in [district2], [ward2] for [price2] on [date2]
-#...
-#...
-#... All the other transactions in the hash
+output
